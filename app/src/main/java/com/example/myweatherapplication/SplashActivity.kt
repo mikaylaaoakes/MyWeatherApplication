@@ -13,12 +13,13 @@ class SplashActivity : AppCompatActivity() {
         val mainButton = findViewById<Button>(R.id.mainButton)
         val closeButton = findViewById<Button>(R.id.closeButton)
 
-        closeButton.setOnClickListener{
+        closeButton.setOnClickListener {
             finish()
         }
         //code to take the user to the next page when clicking on the Main screen button
-        mainButton.setOnClickListener{
+        mainButton.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
     }
 }

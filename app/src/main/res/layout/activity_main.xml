@@ -6,21 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="22dp"
         android:layout_marginBottom="33dp"
+        android:backgroundTint="#3B59FD"
         android:text="Add Input"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -31,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
         android:layout_marginBottom="33dp"
+        android:backgroundTint="#3B59FD"
         android:text="View"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/addButton" />
@@ -41,8 +34,65 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="33dp"
+        android:backgroundTint="#3B59FD"
         android:text="Delete"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/dayEditText"
+        android:layout_width="280dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="text"
+        android:text="Day:"
+        android:textColor="#F6980D"
+        app:layout_constraintBottom_toTopOf="@+id/minTempEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/minTempEditText"
+        android:layout_width="287dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="65dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="text"
+        android:text="Minimum Temperature:"
+        android:textColor="#F6980D"
+        app:layout_constraintBottom_toTopOf="@+id/maxTempEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/maxTempEditText"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="66dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="text"
+        android:text="Maximum Temparature:"
+        android:textColor="#F6980D"
+        app:layout_constraintBottom_toTopOf="@+id/weatherEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/weatherEditText"
+        android:layout_width="287dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="39dp"
+        android:layout_marginBottom="53dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="text"
+        android:text="Weather Condition:"
+        android:textColor="#F6980D"
+        app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
