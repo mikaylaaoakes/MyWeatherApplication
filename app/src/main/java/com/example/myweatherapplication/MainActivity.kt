@@ -6,12 +6,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import androidx.lifecycle.ReportFragment.Companion.reportFragment
+
 
 class MainActivity : AppCompatActivity() {
 
     private val dates = ArrayList<String>()
-    private val sun = ArrayList<String>()
     private val days = ArrayList<String>()
     private val minimumTemps = ArrayList<Int>()
     private val maximumTemps = ArrayList<Int>()
@@ -23,7 +22,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val dayEditText = findViewById<EditText>(R.id.dayEditText)
-        val sunnyEditText = findViewById<EditText>(R.id.sunnyEditText)
         val dateEditText = findViewById<EditText>(R.id.dateEditText)
         val minTempEditText = findViewById<EditText>(R.id.minTempEditText)
         val maxTempEditText = findViewById<EditText>(R.id.maxTempEditText)
@@ -35,16 +33,14 @@ class MainActivity : AppCompatActivity() {
         addButton.setOnClickListener {
             val day = dayEditText.text.toString()
             val date = dateEditText.text.toString()
-            val sunny = sunnyEditText.text.toString()
             val minimumTemp = minTempEditText.text.toString().toIntOrNull()
             val maximumTemp = maxTempEditText.toString().toIntOrNull()
             val weatherCondition = weatherEditText.text.toString()
 
             //adding the user input stored in the variables into the arrays
-            if (date.isNotEmpty() && sunny.isNotEmpty() && day.isNotEmpty() && minimumTemp != null && maximumTemp != null && weatherCondition.isNotEmpty()) {
+            if (date.isNotEmpty() && day.isNotEmpty() && minimumTemp != null && maximumTemp != null && weatherCondition.isNotEmpty()) {
                 days.add(day)
                 dates.add(date)
-                sun.add(sunny)
                 minimumTemps.add(minimumTemp)
                 maximumTemps.add(maximumTemp)
                 weatherConditions.add(weatherCondition)
@@ -52,7 +48,6 @@ class MainActivity : AppCompatActivity() {
                 clearFields(
                     dayEditText,
                     dateEditText,
-                    sunnyEditText,
                     minTempEditText,
                     maxTempEditText,
                     weatherEditText
@@ -67,7 +62,6 @@ class MainActivity : AppCompatActivity() {
             deleteButton.setOnClickListener{
                 days.clear()
                 dates.clear()
-                sun.clear()
                 minimumTemps.clear()
                 maximumTemps.clear()
                 weatherConditions.clear()
@@ -78,7 +72,6 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this, DetailActivity::class.java)
                 intent.putStringArrayListExtra("dates", dates)
                 intent.putStringArrayListExtra("days", days)
-                intent.putStringArrayListExtra("sun", sun)
                 intent.putIntegerArrayListExtra("minimumTemps", minimumTemps)
                 intent.putIntegerArrayListExtra("maximumTemps", maximumTemps)
                 intent.putStringArrayListExtra("weatherConditions", weatherConditions)
