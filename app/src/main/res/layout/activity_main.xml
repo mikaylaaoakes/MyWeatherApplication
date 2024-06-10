@@ -42,9 +42,9 @@
     <EditText
         android:id="@+id/dayEditText"
         android:layout_width="280dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginBottom="46dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="108dp"
         android:ems="10"
         android:fontFamily="sans-serif-medium"
         android:inputType="text"
@@ -58,8 +58,8 @@
         android:id="@+id/minTempEditText"
         android:layout_width="287dp"
         android:layout_height="43dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:fontFamily="sans-serif-medium"
         android:inputType="text"
@@ -73,8 +73,8 @@
         android:id="@+id/maxTempEditText"
         android:layout_width="286dp"
         android:layout_height="39dp"
-        android:layout_marginStart="39dp"
-        android:layout_marginBottom="66dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="36dp"
         android:ems="10"
         android:fontFamily="sans-serif-medium"
         android:inputType="text"
@@ -95,6 +95,34 @@
         android:text="Weather Condition:"
         android:textColor="#F6980D"
         app:layout_constraintBottom_toTopOf="@+id/addButton"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/dateEditText"
+        android:layout_width="283dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="32dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="text"
+        android:text="Date:"
+        android:textColor="#F6980D"
+        app:layout_constraintBottom_toTopOf="@+id/dayEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/sunnyEditText"
+        android:layout_width="280dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="33dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-medium"
+        android:inputType="text"
+        android:text="Sunny/Cloudy?"
+        android:textColor="#F6980D"
+        app:layout_constraintBottom_toTopOf="@+id/minTempEditText"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
