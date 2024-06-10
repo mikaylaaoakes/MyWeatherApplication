@@ -109,6 +109,7 @@
         android:text="Date:"
         android:textColor="#F6980D"
         app:layout_constraintBottom_toTopOf="@+id/dayEditText"
+        android:hint="Date(YYYY-MM-DD)"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
