@@ -26,6 +26,8 @@
         android:fontFamily="sans-serif-black"
         android:text="Weatherworks"
         android:textAlignment="center"
+        android:textColor="#778AF6"
+        android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
@@ -41,8 +43,8 @@
 
     <Button
         android:id="@+id/closeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="107dp"
+        android:layout_height="52dp"
         android:layout_marginEnd="31dp"
         android:layout_marginBottom="29dp"
         android:text="Close"
@@ -63,8 +65,8 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="28dp"
         android:text="Mikayla Oakes"
         app:layout_constraintBottom_toTopOf="@+id/mainButton"
         app:layout_constraintStart_toStartOf="parent" />

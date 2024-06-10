@@ -1,7 +1,10 @@
 package com.example.myweatherapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 
 class DetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,7 +17,7 @@ class DetailActivity : AppCompatActivity() {
         val maximumTemps = intent.getIntegerArrayListExtra("maximumTemps")?:arrayListOf()
         val weatherConditions = intent.getStringArrayListExtra("weatherConditions")?:arrayListOf()
 
-        val viewTextView = findViewById<TextView>(R.id.viewTextView)
+        var viewTextView = findViewById<TextView>(R.id.viewTextView)
         val averageTempTextView = findViewById<TextView>(R.id.averageTempTextView)
         val returnButton = findViewById<Button>(R.id.returnButton)
 
@@ -23,13 +26,13 @@ class DetailActivity : AppCompatActivity() {
         for (i in days.indices) {
             val dailyTemp = minimumTemps[i] + maximumTemps[i]
             totalTemp += dailyTemp
-            showText +="Date: ${dates[i]}, Day: ${days[i]}, Sunny/Cloudy: ${sun[i]}, Minimum: ${minimumTemps[i]}, Maximum: ${maximumTemps[i]}, Weather: ${weatherConditions[i]} "
+            showText +="Date: ${dates[i]}, Day: ${days[i]}, Minimum: ${minimumTemps[i]}, Maximum: ${maximumTemps[i]}, Weather: ${weatherConditions[i]} "
         }
 
         val averageTemp = if(days.isNotEmpty() && dates.isNotEmpty())
             totalTemp / days.size else 0
 
-        viewTextView = showText
+        viewTextView.text = showText
         averageTempTextView.text = "Average Temperature: $averageTemp degrees per day"
 
 
